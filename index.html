@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="heading">Stock Tracker Dashboard</h1>
+    <div class="container">
+        <div class="stock-selector">
+            <label for="stocks">Select Trending Stock:</label>
+            <select id="stocks"></select>
+            <button id="load-stock">Load Stock</button>
+        </div>
+        <div class="search-box">
+            <label for="stock-search">Search Stock:</label>
+            <input type="text" id="stock-search" placeholder="Enter stock symbol or name">
+            <button id="search-stock">Search</button>
+        </div>
+        <div id="stock-info">
+            <h2>Stock Information</h2>
+            <table id="stock-table">
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Volume</th>
+                        <th>Open</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Previous Close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>  
+                        <td id="stock"></td>
+                        <td id="price"></td>
+                        <td id="change"></td>
+                        <td id="volume"></td>
+                        <td id="open"></td>
+                        <td id="high"></td>
+                        <td id="low"></td>
+                        <td id="prev-close"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <canvas id="stock-chart"></canvas>
+        <h2>Compare Stocks</h2>
+        <table id="compare-stocks">
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
+</body>
+</html>
